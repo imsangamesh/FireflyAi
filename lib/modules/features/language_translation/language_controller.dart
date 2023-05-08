@@ -31,7 +31,9 @@ class LanguageController extends GetxController {
   /// ---------------------------------- `download`
   downloadLang(TranslateLanguage lang) async {
     Utils.showSnackBar('downloading...');
-    await modelManager.downloadModel(lang.bcpCode).then((value) {
+    await modelManager
+        .downloadModel(lang.bcpCode, isWifiRequired: false)
+        .then((value) {
       downloadedCodes.add(lang);
       Utils.showSnackBar('${lang.name} downloaded!', status: true);
     });
