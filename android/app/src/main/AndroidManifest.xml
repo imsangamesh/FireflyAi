@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fireflyai">
    <application
-        android:label="fireflyai"
+        android:label="Firefly Ai"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
