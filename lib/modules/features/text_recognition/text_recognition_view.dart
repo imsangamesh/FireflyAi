@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -21,8 +20,6 @@ class TextRecognitionView extends StatelessWidget {
   final imageFile = File('').obs;
   final loading = false.obs;
   final scannedText = ''.obs;
-
-  final uploadCtrlr = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -90,11 +87,10 @@ class TextRecognitionView extends StatelessWidget {
                         Utils.showSnackBar('copied to Clipboard!');
                       },
                       secondFun: () {
-                        uploadCtrlr.text = scannedText();
-                        Utils.inputDialogBox(
-                          '',
-                          uploadCtrlr,
-                          yesFun: () => uploadToFireStore(uploadCtrlr.text),
+                        Utils.confirmDialogBox(
+                          'Alert!',
+                          'do you want to upload the scanned text to cloud?',
+                          yesFun: () => uploadToFireStore(scannedText()),
                         );
                       },
                     ),
@@ -189,7 +185,6 @@ class TextRecognitionView extends StatelessWidget {
       }
     }
 
-    log('======================================= ${scannedText.value}');
     if (scannedText() == '') {
       imageFile(File(''));
       Utils.showAlert(

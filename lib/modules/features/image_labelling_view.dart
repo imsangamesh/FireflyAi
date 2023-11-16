@@ -74,7 +74,7 @@ class ImageLabellingView extends StatelessWidget {
                       child: Image.file(imageFile(), fit: BoxFit.contain),
                     ),
 
-                  /// ---------------------------------------------- `select confidence`
+                  /// ---------------------------------------------- `select accuracy`
                   if (imageFile().path != '')
                     Align(
                       alignment: Alignment.centerRight,

@@ -178,7 +178,7 @@ class _ProfileScreenViewState extends State<ProfileScreenView> {
                       ProfileSettingsTile(
                         Icons.auto_awesome_rounded,
                         isDark()
-                            ? 'Lively Nightly nights!'
+                            ? 'Lively & Nightly nights!'
                             : 'Light & Bright mood!',
                         toggleTheme,
                         false,

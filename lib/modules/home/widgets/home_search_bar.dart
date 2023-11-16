@@ -37,7 +37,7 @@ class _HomeSearchBarState extends State<HomeSearchBar> {
       Utils.confirmDialogBox(
         'follow link?',
         text,
-        yesFun: () => Get.to(() => SearchResultPageView(text)),
+        yesFun: () => Get.to(() => SearchResultPageView(text, isUrl: true)),
       );
     }
   }
