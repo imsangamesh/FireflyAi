@@ -71,7 +71,7 @@ class _HomeSearchBarState extends State<HomeSearchBar> {
         },
         decoration: InputDecoration(
           /// -------------- `hint text`
-          hintText: "what do ya' have on your mind...",
+          hintText: "What's on your mind?",
           hintStyle: MyTStyles.kTS13Regular.copyWith(
             color: MyColors.midGrey,
             height: 0.9,

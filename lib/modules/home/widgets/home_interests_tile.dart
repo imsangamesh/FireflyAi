@@ -53,7 +53,7 @@ class HomeInterestsTile extends StatelessWidget {
             childrenPadding: const EdgeInsets.all(10),
             expandedAlignment: Alignment.centerLeft,
             onExpansionChanged: (val) => isExpanded(val),
-            title: const Text('Your Interests', style: MyTStyles.kTS18Medium),
+            title: const Text('My Interests', style: MyTStyles.kTS18Medium),
             children: [
               /// -------------------------------------------------------------- `children`
               GetX<HomeController>(

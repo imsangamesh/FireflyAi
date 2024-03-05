@@ -62,7 +62,7 @@ class LanguageDetectionView extends StatelessWidget {
                 /// ---------------------------------------------- `button`
                 SizedBox(
                   width: double.infinity,
-                  child: MyOutlinedBtn(
+                  child: MyElevatedBtn(
                     'Detect Language',
                     () => detectLanguage(context),
                   ),

@@ -85,7 +85,7 @@ class SmartReplyView extends StatelessWidget {
                 /// ---------------------------------------------- `button`
                 SizedBox(
                   width: double.infinity,
-                  child: MyOutlinedBtn(
+                  child: MyElevatedBtn(
                     'Extract entitities',
                     () => extractData(context),
                   ),

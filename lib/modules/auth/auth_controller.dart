@@ -74,6 +74,36 @@ class AuthController extends GetxController {
     }
   }
 
+  myAnonymousSignin() async {
+    try {
+      final userCredential = await FirebaseAuth.instance.signInAnonymously();
+      final user = userCredential.user;
+
+      _box.write(MyPrefKeys.userStatus, true);
+
+      final themeController = Get.put(ThemeController());
+      final homeController = Get.put(HomeController(), permanent: true);
+      final profileCntrlr = Get.put(ProfileController());
+
+      themeController.configureTheme();
+      homeController.resetInterests();
+      profileCntrlr.setUpProfilePage();
+      profileCntrlr.configureGreetingText();
+
+      Get.offAll(() => const HomeScreen());
+      Utils.showSnackBar('Login Successful!', status: true);
+      //
+    } on FirebaseAuthException catch (e) {
+      Utils.showAlert('Oops!', e.message.toString());
+    } catch (e) {
+      if (e.toString() == 'Null check operator used on a null value') {
+        Utils.showSnackBar('Please select your email to proceed!');
+      } else {
+        Utils.normalDialog();
+      }
+    }
+  }
+
   logout() async {
     try {
       //

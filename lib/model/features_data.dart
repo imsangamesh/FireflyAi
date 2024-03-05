@@ -10,37 +10,37 @@ import 'package:flutter/material.dart';
 final allFeatures = [
   MLFeatures(
     'Text Recognition',
-    '● recognise and extract text from images',
+    '● Recognise and extract text from images',
     MyImages.textRecognition,
     TextRecognitionView(),
   ),
   MLFeatures(
     'Image Labelling',
-    '● identify objects, animal species, products and more...',
+    '● Identify objects, animal species, products and more...',
     MyImages.imageClassification,
     ImageLabellingView(),
   ),
   MLFeatures(
     'Scan Barcode',
-    '● scan and extract the data from barcodes.',
+    '● Scan and extract the data from barcodes.',
     MyImages.barcodeScanning,
     BarcodeScannerView(),
   ),
   MLFeatures(
     'Language Id',
-    '● detect the language of text snippet',
+    '● Detect the language of text snippet',
     MyImages.languageDetection,
     LanguageDetectionView(),
   ),
   MLFeatures(
     'Lang Translation',
-    '● translate text from one language to another',
+    '● Translate text from one language to another',
     MyImages.onDeviceTranslate,
     const TranslateLanguageView(),
   ),
   MLFeatures(
     'Extract Entities',
-    '● recognize specific entities in text snippet',
+    '● Recognize specific entities in text snippet',
     MyImages.smartReply,
     SmartReplyView(),
   ),

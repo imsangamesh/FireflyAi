@@ -55,6 +55,22 @@ class SigninScreen extends StatelessWidget {
                 ],
               ),
             ),
+            TextButton.icon(
+              label: const Text(
+                '  Signin anonymously  ',
+              ),
+              icon: const Icon(Icons.person_rounded),
+              onPressed: () => authController.myAnonymousSignin(),
+              style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 7,
+                  horizontal: 10,
+                ),
+              ),
+            ),
           ],
         ),
       ),
